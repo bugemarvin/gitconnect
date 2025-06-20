@@ -48,7 +48,6 @@ export default function ContactSection() {
 
   return (
     <Container
-      bg="gray.50"
       maxW="full"
       mt={0}
       centerContent
@@ -57,7 +56,7 @@ export default function ContactSection() {
     >
       <Flex>
         <Box
-          bg="primary.600"
+          bg="gray.100"
           color="white"
           borderRadius="lg"
           m={{ sm: 4, md: 16, lg: 10 }}
@@ -155,10 +154,10 @@ export default function ContactSection() {
                               <BsPerson color="gray.800" />
                             </InputLeftElement>
                             <Input type="text" size="md"
-                            name="name"
-                            value={user.name}
-                            onChange={(e) => setUser({ ...user, name: e.target.value })}
-                             />
+                              name="name"
+                              value={user.name}
+                              onChange={(e) => setUser({ ...user, name: e.target.value })}
+                            />
                           </InputGroup>
                         </FormControl>
                         <FormControl id="name" isRequired>
