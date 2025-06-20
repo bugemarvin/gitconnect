@@ -9,6 +9,8 @@ const config: Config = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   darkMode: ["class"],
+  initialColorMode: "light",
+  useSystemColorMode: false,
   theme: {
     extend: {
       backgroundImage: {
