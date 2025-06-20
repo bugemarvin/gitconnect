@@ -2,6 +2,9 @@ import { extendTheme, type ThemeConfig } from "@chakra-ui/react";
 import tColors from "tailwindcss/colors";
 
 const colors = {
+  transparent: "transparent",
+  black: "#000",
+  white: "#fff",
   primary: {
     DEFAULT: "#2eca7f",
     100: "#eafaf3",
@@ -159,6 +162,23 @@ const theme = extendTheme({
     },
   },
   zIndices,
+  styles: {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    global: (props: any) => ({
+      body: {
+        bg: props.colorMode === "dark" ? "gray.850" : "white",
+        color: props.colorMode === "dark" ? "gray.200" : "gray.800",
+      },
+      a: {
+        color: props.colorMode === "dark" ? "primary.500" : "primary.600",
+      },
+      ".chakra-modal__content": {
+        bg: props.colorMode === "dark" ? "gray.850" : "white",
+      },
+    }),
+  },
+  initialColorMode: "light",
+  useSystemColorMode: false,
 });
 
 export default theme;
